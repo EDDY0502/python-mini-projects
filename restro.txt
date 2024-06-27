@@ -1,0 +1,30 @@
+menu ={
+    'Pizza':50,
+    'Sandwich':40,
+    'Pasta':50,
+    'Cake':80,
+    'Coffee':30,
+}
+
+print("\nWelecome to Hiren's restro\n")
+print("Pizza : 50\nSandwich : 40\nPasta : 50\nCake : 80\nCoffee : 30\n ")
+
+order_total = 0
+
+item_1 =input("Enter the First Order\n")
+if item_1 in menu:
+    order_total+=menu[item_1]
+    print(f"{item_1}is added to order")
+else:
+    print(f"{item_1}is not avilable yet")
+
+anothe_item = input("do you wanna add any other item? (yes/no)\n")
+if anothe_item == "yes":
+    item_2 = input("Enter the second order\n")
+    if item_2 in menu:
+        order_total +=menu[item_2]
+        print(f"{item_2}is also added to the order")
+    else:
+        print(f"{item_2}is not available yet")
+
+print(f"Your total amout to pay is {order_total}")

@@ -1,0 +1,34 @@
+i = (print("game end"))  
+enter=input("enter your name \n")
+print("welcome",enter,"to KBC\n")
+print("your 1st qustion is: ")
+q=["what you drive on road ?","what thing you can eat ?","where you go for read books ?"]
+a=["car","chocolate","college"]
+o=["option1: car ,\n option2: helicopter ,\n option3: book ,\n option4: pen\n" ,"option1: chocolate,\n option2: pencil,\n option3: laptop,\n option4: spoon \n", "option1: cloths,\n option2: mouse,\n option3: house,\n option4: charger \n"]
+x=1000
+y=2000
+z=3000
+print(q[0])
+print("your optiopns are: \n",o[0])
+question1=input("type your answer:  \n")
+if question1 == a[0]:
+    print("congration you won",x,"INR \n\n")
+else:
+    exit (i)
+      
+print(q[1])
+print("your optiopns are: \n",o[1])
+question2=input("type your answer:  \n")
+if question2 == a[1]:
+    print("congration you won",y,"INR")
+else:
+    exit(i)
+     
+      
+print(q[2])
+print("your optiopns are: \n",o[2])
+question3=input("type your answer:  \n")
+if question3 == a[2]:
+    print("congration you won",z,"INR")
+else:
+    exit(i)

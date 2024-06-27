@@ -1,0 +1,49 @@
+def task():
+    tasks=[]
+    print("WELCOME TO, TO DO LIST APP\n\n" )
+
+
+    total_task= int(input("ENTER THE NUMBER OF TASKS YOU WANNA DO TODAY:\n"))
+
+    for i in range(1,total_task+1):
+        task_name =input(f"ENTER TASK{i} = ")
+        tasks.append(task_name) 
+
+    print(f"TODAYS TASKS ARE {tasks}")
+
+
+    while True:
+        ope =int(input("ENTER -\n1-ADD\n2-UPDATE\n3-DELETE\n4-STOP/EXIT\n"))
+        if ope == 1:
+            add=input("ENTER TASK YOU WANNA ADD:\n")
+            tasks.append(add)
+            print(f"Task {add} is being successfully added...")
+
+        elif ope ==2:
+            update_value = input("Enter the task you wanna update:\n")
+            if update_value in tasks:
+                up = input("Enter new task:\n")
+                ind=tasks.index(update_value) 
+                tasks[ind]=up
+                print(f"Updated task{up} in List")
+
+        elif ope ==3:
+            del_value= input("Enter the task you wanna delete:\n")
+            if del_value in tasks:
+                ind=tasks.index(del_value)
+                del tasks[ind]
+                print(f"{del_value}is been deleted from the List")
+            print(f"\nTODAYS TASKS ARE {tasks}")
+        elif ope==4:
+            print("CLOSING THE PROFRAM.....")
+            break
+
+        else:
+            print("INVALID INPUT")    
+        
+        print(f"TODAYS TASKS ARE {tasks}")
+
+        
+
+
+task()

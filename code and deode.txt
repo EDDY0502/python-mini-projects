@@ -1,0 +1,16 @@
+rand1 = 'a'+'h'+'y'
+rand2 = 'f'+'m'+'v'
+a=(int(input("welcome to code and deode \n Press 1 to CODE \n Press 2 to DECODE\n ")))
+if a==1:
+    code= input("Enter the message you wannna send :\n ")
+    if len(code)<=3:
+        print(code[1:]+code[0])
+    elif len(code)>3:
+        print(rand1+code[1:]+code[0]+rand2)   
+         
+elif a==2:
+    code2 = input("Enter the message you Recived :\n")
+    if len(code2)<=3:
+        print(code2[-1]+(code2[1:-1]+(code2[0])))
+    elif len(code2)>3:
+        print((code2[-4]+code2[3:-4]))	
