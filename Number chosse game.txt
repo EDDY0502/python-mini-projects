@@ -1,0 +1,48 @@
+import random
+def number():
+    return random.randint(1,100)
+
+def check(guessed_number,anumber):
+    if guessed_number > anumber:
+        print("Too High")
+    elif guessed_number < anumber:
+        print("Too Low")
+    else:
+        print("Correct!")
+
+def easy_mode():
+    anumber=number()
+    print("You have 10 chances to choose the correct number")
+    for i in range (10,1,-1):
+        guesses_number = int (input("Enter the number: "))
+        if guesses_number == anumber:
+            print("Correct")
+            break
+        elif check(guesses_number,anumber):
+            print(f"Try Again, You have {i-1} chances left")
+            
+
+            
+               
+def hard_mode():
+    anumber=number()
+    print("You have 5 chances to choose the correct number")
+    for i in range (10,1,-1):
+        guesses_number = int (input("Enter the number: "))
+        if guesses_number == anumber:
+            print("Correct")
+            break
+        elif check(guesses_number,anumber):
+            print(f"Try Again, You have {i-1} chances left")
+            
+        
+            
+print ("Welcome to the guess game")
+print("I'm thinking of a Number Between 1 to 100")
+a=input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+
+if a=="easy":  
+    easy_mode()
+
+elif a =="hard":
+    hard_mode()
