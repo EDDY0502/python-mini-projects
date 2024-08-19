@@ -1,0 +1,44 @@
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+
+print(logo)
+
+
+def higest(bidding_d):
+    highest_big=0
+    winner=""
+    for bidder in bidding_d:
+        bid_amount= bidding_d[bidder]
+        if bid_amount>highest_big:
+            highest_big=bid_amount
+            winner=bidder
+
+    print(f"the winner is {winner} with the higgest bid of Rs{highest_big}")
+
+bids={}
+
+bidding=True
+
+while bidding==True:
+    name = input("Enter your Name: ")
+    price= int(input("enter your price:Rs "))
+
+    bids[name]=price   
+    cont = input("Do you wanna Continue: Y for yes N for no\n").lower() 
+    if cont == "n":
+        bidding=False
+        higest(bids)
+    elif cont=="y":
+        print("\n"*50)
+
