@@ -1,0 +1,17 @@
+from question_model import Question
+from data import question_data
+from quiz_brain import QuizBrain
+question_bank =[]
+
+for question in question_data:
+    question_text=question["text"]
+    question_ans = question["answer"]
+    new_que=Question(text=question_text,answer=question_ans)
+    question_bank.append(new_que)
+    
+quiz=QuizBrain(question_bank)
+
+while quiz.still_has_que():
+    quiz.next_que()
+    
+print(f"The Quiz Ended \n You scored{quiz.score}/{quiz.question_number}")

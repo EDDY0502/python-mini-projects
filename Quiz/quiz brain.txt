@@ -1,0 +1,31 @@
+class QuizBrain():
+  
+    def __init__(self,q_list):
+        self.question_number =0
+        self.score=0
+        self.question_list=q_list
+       
+    def still_has_que(self):
+        if self.question_number<len(self.question_list):
+            return True
+        else:
+            return False
+    
+      
+    def next_que(self):
+        current_que=self.question_list[self.question_number]
+        self.question_number +=1
+        user_ans=input(f"Q:{self.question_number}: {current_que.text}. (True/False)?: ")
+        self.check_ans(user_ans,current_que.answer)
+    
+    def check_ans(self,user_ans,correct_ans):
+        
+        if user_ans==correct_ans.lower():
+            print("You got it right")
+            self.score+=1
+            
+        else:
+            print("OOPSI")
+            print(f"The correct Answer Was: {correct_ans}")
+        print(f"You scoored {self.score}/{self.question_number}")
+        print("\n")
