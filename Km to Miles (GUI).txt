@@ -1,0 +1,33 @@
+from tkinter import *
+
+window = Tk()
+
+def click():
+    get=float(input.get())
+    cal = get*1.609
+    input1.config(text=f"{cal}")
+
+window.title("Mile to Km conveter")
+window.config(padx=20,pady=20)
+
+input = Entry(width=10)
+input.grid(column=2, row=0)
+
+miles = Label(text="Miles", font=("Arial", 12))
+miles.grid(column=3, row=0)
+
+is_equal=Label(text="is equal to",font=("Arial,12"))
+is_equal.grid(column=0,row=1)
+
+input1=Label(text="0",font=("Arial,12"))
+input1.grid(column=2, row=1)
+
+km=Label(text="Km",font=("Arial,12"))
+km.grid(column=3,row=1)
+
+button = button = Button(text="Click me", command=click)
+button.grid(column=2,row=4)
+
+
+
+window.mainloop()
