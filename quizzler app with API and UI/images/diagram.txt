@@ -1,0 +1,25 @@
+                ┌──────────────────────┐
+                │        main.py       │
+                │ (Program Entry)      │
+                └─────────┬────────────┘
+                          │
+                          │ creates Question objects
+                          ▼
+                ┌──────────────────────┐
+                │      Question        │
+                │  (Data Model Class)  │
+                └─────────┬────────────┘
+                          │
+                          │ list of Question objects
+                          ▼
+                ┌──────────────────────┐
+                │      QuizBrain       │
+                │   (Logic Controller) │
+                └─────────┬────────────┘
+                          │
+                          │ passed into
+                          ▼
+                ┌──────────────────────┐
+                │    QuizInterface     │
+                │        (UI)          │
+                └──────────────────────┘
